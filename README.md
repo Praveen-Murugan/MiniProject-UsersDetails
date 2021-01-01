@@ -17,7 +17,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Request
 pip install requests
 pip install pandas
 ```
-## importing
+## Importing
 In order to use the package we need to import the package in our python file
 ```
 import requests
@@ -32,7 +32,7 @@ import requests
 requests.get('https://api.github.com/users') #get the data from the url
 pandas.DataFrame([]) #to define the empty dataframe for saving the csv file
 ```
-## working
+## Working
 ```
 base_url = 'https://api.github.com/users'
 resp = requests.get(base_url)
