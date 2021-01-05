@@ -9,8 +9,8 @@ df = pd.DataFrame([])
 
 for user in data:#to store the data of 'data' in user variable
     if(user['id']%5 == 0):#To get the list of users which are divisible by 5
-        user_name = requests.get('https://api.github.com/users/{}'.format(user['login'])).json()
-        foll_details =  requests.get('https://api.github.com/users/{}/followers'.format(user['login'])).json()
+        user_name = requests.get(user['url']).json()
+        foll_details =  requests.get(user['followers_url']).json()
         list=len(foll_details)
         for i in range(list):
             print(user['id'],user['login'],user_name['name'],foll_details[i]['id'],foll_details[i]['login'])
